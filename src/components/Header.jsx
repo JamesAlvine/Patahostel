@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-// import logo from '../pics/logo.png'
+import logo from '../pics/logo.png'
 
 export default function Header() {
   const location = useLocation();
@@ -15,7 +15,7 @@ export default function Header() {
         <header className="flex justify-between items-center px-3 max-w-6xl mx-auto">
           <div>
             <h2>Patahostel</h2>
-            {/* <img src={logo} alt='' className='  cursor-pointer' onClick = {()=> navigate ("/")} /> */}
+            <img src={logo} alt='' className='  cursor-pointer' onClick = {()=> navigate ("/")} />
             
           </div>
           <div>
