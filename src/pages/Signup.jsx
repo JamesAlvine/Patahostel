@@ -7,7 +7,7 @@ import {
   createUserWithEmailAndPassword,
   updateProfile,
 } from "firebase/auth";
-import { db } from "../firebase";
+import { db } from "../pages/firebase";
 import { doc, serverTimestamp, setDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -20,7 +20,7 @@ export default function SignUp() {
     password: "",
   });
   const { name, email, password } = formData;
-  const navigate = useNavigate();
+  const navigate  = useNavigate();
   function onChange(e) {
     setFormData((prevState) => ({
       ...prevState,
@@ -47,8 +47,8 @@ export default function SignUp() {
       formDataCopy.timestamp = serverTimestamp();
 
       await setDoc(doc(db, "users", user.uid), formDataCopy);
-      // toast.success("Sign up was successful");
-      // navigate("/");
+      toast.success("Sign up was successful");
+      navigate("/");
     } catch (error) {
       toast.error("Something went wrong with the registration");
     }

@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
-// import { signInWithEmailAndPassword, getAuth } from "firebase/auth";
-import { toast } from "react-toastify";
 import OAuth from "../components/OAuth";
+import { signInWithEmailAndPassword, getAuth } from "firebase/auth";
+import { toast } from "react-toastify";
 
-export default function Signin() {
+export default function SignIn() {
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
     email: "",
@@ -22,28 +22,26 @@ export default function Signin() {
   async function onSubmit(e) {
     e.preventDefault();
     try {
-      // const auth = getAuth();
-      // const userCredential = await signInWithEmailAndPassword(
-      //   auth,
-      //   email,
-      //   password
-      // );
-      // if (userCredential.user) {
-      //   navigate("/");
-      // }
+      const auth = getAuth();
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      if (userCredential.user) {
+        navigate("/");
+      }
     } catch (error) {
-      toast.error("Invalid user credentials");
+      toast.error("Bad user credentials");
     }
   }
   return (
     <section>
-      <h1 className="text-3xl text-center mt-6 font-bold">
-        Sign in to your account
-      </h1>
+      <h1 className="text-3xl text-center mt-6 font-bold">Sign In</h1>
       <div className="flex justify-center flex-wrap items-center px-6 py-12 max-w-6xl mx-auto">
         <div className="md:w-[67%] lg:w-[50%] mb-12 md:mb-6">
           <img
-            src="https://media.istockphoto.com/id/1254374019/photo/a-building-with-hostel-sign-good-place-for-college-life-students.jpg?b=1&s=170667a&w=0&k=20&c=CDF7I59ZgL1mkY8osE6VvhjmzMxIL39VwlNkSg2T41g="
+            src="https://images.unsplash.com/flagged/photo-1564767609342-620cb19b2357?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1373&q=80"
             alt="key"
             className="w-full rounded-2xl"
           />
