@@ -376,7 +376,7 @@ export default function CreateListing() {
             </div>
           </div>
         )}
-        <p className="text-lg font-semibold">Description</p>
+        <p className="text-lg font-semibold">Descriptions</p>
         <textarea
           type="text"
           id="description"

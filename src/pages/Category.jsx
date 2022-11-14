@@ -9,7 +9,7 @@ import {
   startAfter,
   where,
 } from "firebase/firestore";
-import { db } from "../firebase";
+import { db } from "../pages/firebase";
 import Spinner from "../components/Spinner";
 import ListingItem from "../components/ListingItem";
 import { useParams } from "react-router-dom";

@@ -2,7 +2,7 @@ import { doc, getDoc } from "firebase/firestore";
 import { useState } from "react";
 import { useEffect } from "react";
 import { toast } from "react-toastify";
-import { db } from "../firebase";
+import { db } from "../pages/firebase";
 
 export default function Contact({ userRef, listing }) {
   const [landlord, setLandlord] = useState(null);
