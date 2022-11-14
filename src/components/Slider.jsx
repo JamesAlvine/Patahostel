@@ -2,7 +2,7 @@ import { collection, getDocs, limit, orderBy, query } from "firebase/firestore";
 import { useState } from "react";
 import { useEffect } from "react";
 import Spinner from "../components/Spinner";
-import { db } from "../firebase";
+import { db } from "../pages/firebase";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, {
   EffectFade,

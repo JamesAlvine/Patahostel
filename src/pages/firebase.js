@@ -13,6 +13,7 @@ const firebaseConfig = {
   // messagingSenderId: process.env.messagingSenderId ,
   // appId: process.env.appId
   
+  
 };
 
 // Initialize Firebase
