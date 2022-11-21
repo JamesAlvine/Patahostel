@@ -17,7 +17,7 @@ import {
   serverTimestamp,
   updateDoc,
 } from "firebase/firestore";
-import { db } from "../firebase";
+import { db } from "../pages/firebase";
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -376,7 +376,7 @@ export default function CreateListing() {
             </div>
           </div>
         )}
-        <p className="text-lg font-semibold">Descriptions</p>
+        <p className="text-lg font-semibold">Description</p>
         <textarea
           type="text"
           id="description"

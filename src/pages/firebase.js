@@ -6,15 +6,14 @@ import {getFirestore} from "firebase/firestore"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  // apiKey:process.env.apikey ,
-  // authDomain:process.env.authDomain ,
-  // projectId: process.env.projectId,
-  // storageBucket: process.env.storageBucket,
-  // messagingSenderId: process.env.messagingSenderId ,
-  // appId: process.env.appId
- 
+  apiKey: "AIzaSyCGwj4i0NcsQybcNO04C4NQxxy8ZixuJS8",
+  authDomain: "pata-hostel-b2eee.firebaseapp.com",
+  projectId: "pata-hostel-b2eee",
+  storageBucket: "pata-hostel-b2eee.appspot.com",
+  messagingSenderId: "640571221755",
+  appId: "1:640571221755:web:b9c01c84e9a5c855d0325e"
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 export const db = getFirestore()
